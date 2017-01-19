@@ -1,5 +1,5 @@
 # import the necessary packages
-import imutils
+from scipy.misc import imresize
 
 def pyramid(image, scale=1.5, minSize=(32, 32)):
 	# yield the original image
@@ -8,8 +8,7 @@ def pyramid(image, scale=1.5, minSize=(32, 32)):
 	# keep looping over the pyramid
 	while True:
 		# compute the new dimensions of the image and resize it
-		w = int(image.shape[1] / scale)
-		image = imutils.resize(image, width=w)
+		image = imresize(image, ((int(image.shape[1] / scale), int(image.shape[0] / scale) , 3)))
 
 		# if the resized image does not meet the supplied minimum
 		# size, then stop constructing the pyramid
