@@ -6,7 +6,7 @@ import numpy as np
 import chainer 
 import chainer.functions as F
 import pickle
-import cv2
+from PIL import Image
 
 # CNN
 def predict(X, model):
@@ -29,11 +29,11 @@ def load_model(model_path):
 
 # Exhaustive Search
 # Parameters to change
-image_path = 'test/test6/test6.jpg'
+image_path = 'tomato.jpg'
 model_object_path = 'model_object.pkl'
 model_recog_path = 'model_recog.pkl'
 
-image = cv2.imread(image_path)
+image = np.array(Image.open(image_path))[:, :, ::-1]
 model_object = load_model(model_object_path)
 model_recog = load_model(model_recog_path)
 
