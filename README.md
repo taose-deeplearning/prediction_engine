@@ -1,0 +1,6 @@
+# prediction_engine
+
+main.pyのimage_path, mode_object_path, model_recog_pathを変えてください。最後のpredictionは予想したラベルの集合です。
+
+物体検出→検出した物体の識別 の2段階のアルゴリズムになってます。mode_object.pklは物体検出用に学習させたモデル、mode_recog.pklは検出された物体を認識
+させるために学習させたモデルです。
