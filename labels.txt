@@ -1,0 +1,7 @@
+6 : 'cabbage'
+5 : 'carrot'
+4 : 'cucumber'
+3 : 'green_pepper' 
+2 : 'onion'
+1 : 'potato'
+0 : 'tomato'
